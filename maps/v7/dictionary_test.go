@@ -74,7 +74,7 @@ func TestDelete(t *testing.T) {
 	dictionary.Delete(word)
 
 	_, err := dictionary.Search(word)
-	assertError(t, err, ErrNotFound)
+	assertError(t, err, ErrNotFound) // ! on the webpage there is still word instead of err
 }
 
 func assertStrings(t testing.TB, got, want string) {
